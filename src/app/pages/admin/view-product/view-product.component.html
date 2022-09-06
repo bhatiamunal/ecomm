@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <h2>Striped Rows</h2>
+    <div routerLink= "/admin/addProducts"> Add Product </div>          
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Img</th>
+          <th>Product Name</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productData">
+          <td> <img [src]="product.img1" width="100ox" height="100px"> </td>
+          <td>{{product.name}}</td>
+          <td>{{product.quantity}}</td>
+          <td> {{product.price}} </td>
+          <td (click)="deleteItem(product.id)"> Delete </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>

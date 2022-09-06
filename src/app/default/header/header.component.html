@@ -1,0 +1,46 @@
+<style>
+  a{
+    color: black;
+  }
+  .navbar-brand,.nav-link{
+    color: WHITE;
+  }
+</style>
+
+<nav class="navbar navbar-expand-sm " style="background:linear-gradient(105deg,#6e99e6 ,#093c94); color: white;">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">Sporty shoes </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="Products">Products  </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="AboutMe">About us  </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="contact">Contact us </a>
+          </li>  
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="login">Profile</a>
+          </li>  -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">My Account</a>
+            <ul class="dropdown-menu" >
+              <li><a class="dropdown-item" *ngFor="let item of myAccount" [routerLink]="item.link"> {{item.name}} </a></li>
+              <li *ngIf="loginStatusHd"><a class="dropdown-item"  (click)="logoutFn()"> Logout </a></li>
+             
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/viewproducts">Admin</a>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+

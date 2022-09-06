@@ -1,0 +1,37 @@
+<div class="container mt-3">
+    <h2> Add Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      
+      <!-- <div class="mb-3 mt-3">
+        <label for="pname">Product Id:</label>
+        <input type="text" class="form-control" id="pid" placeholder="Enter product id" name="pid" formControlName = "pid">
+      </div> -->
+      <div class="mb-3 mt-3">
+        <label for="pname">Name of product:</label>
+        <input type="text" class="form-control" id="pname" placeholder="Enter product name" name="pname" formControlName = "pname">
+      </div>
+      <div class="mb-3">
+        <label for="price">Price:</label>
+        <input type="text" class="form-control" id="price" placeholder="Enter Price " name="Price" formControlName = "price">
+      </div>
+      <div class="mb-3">
+        <label for="qty">Qty:</label>
+        <input type="text" class="form-control" id="qty" placeholder="Enter Qty " name="Qty" formControlName = "Qty">
+      </div>
+      
+      <div class="mb-3">
+        <label for="img">Image 1 :</label>
+        <input type="file" class="form-control" id="image" placeholder="Enter image" name="img" (change)="onChange($event,1)">
+      </div>
+      <div class="mb-3">
+        <label for="img">Image 2:</label>
+        <input type="file" class="form-control" id="image" placeholder="Enter image" name="img" (change)="onChange($event,2)">
+      </div>
+      <div class="mb-3">
+        <label for="img">Image 3:</label>
+        <input type="file" class="form-control" id="image" placeholder="Enter image" name="img" (change)="onChange($event,3)">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div> 
